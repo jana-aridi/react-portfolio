@@ -26,9 +26,9 @@ const Resume = () => {
     <>
       {process.env.NODE_ENV === "development" && (
         <div className="fixed bottom-6 right-6">
-          <Button onClick={() => router.push("/edit")} type={"primary"}>
-            Edit Resume
-          </Button>
+        {/* //   <Button onClick={() => router.push("/edit")} type={"primary"}>
+        //     Edit Resume
+        //   </Button> */}
         </div>
       )}
       {data.showCursor && <Cursor />}
@@ -45,7 +45,8 @@ const Resume = () => {
                 mount && theme.theme === "dark" ? "bg-slate-800" : "bg-gray-50"
               } max-w-4xl p-20 mob:p-5 desktop:p-20 rounded-lg shadow-sm`}
             >
-              <h1 className="text-3xl font-bold">{name}</h1>
+              <h1 className="text-3xl font-bold">{name}</h1> 
+              <a style={{color:"blue", fontStyle: "italic"}} href="https://drive.google.com/file/d/12LscRQ5TyG_36JHGnH1NgQYLQpqXYU5K/view?usp=sharing">Download Resume</a>
               <h2 className="text-xl mt-5">{resume.tagline}</h2>
               <h2 className="w-4/5 text-xl mt-5 opacity-50">
                 {resume.description}

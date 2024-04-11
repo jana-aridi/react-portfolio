@@ -20,15 +20,17 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   return (
     <>
       <Popover className="block tablet:hidden mt-5">
+        
         {({ open }) => (
           <>
             <div className="flex items-center justify-between p-2 laptop:p-0">
-              <h1
+              <h3
                 onClick={() => router.push("/")}
                 className="font-medium p-2 laptop:p-0 link"
               >
                 {name}.
-              </h1>
+              </h3> 
+              
 
               <div className="flex items-center">
                 {data.darkMode && (
@@ -71,9 +73,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 <div className="grid grid-cols-1">
                   <Button onClick={handleWorkScroll}>Work</Button>
                   <Button onClick={handleAboutScroll}>About</Button>
-                  {showBlog && (
-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
-                  )}
+                   
                   {showResume && (
                     <Button
                       onClick={() =>
@@ -108,7 +108,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   )}
 
                   <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
+                    onClick={() => window.open("mailto:jana.aridi1@gmail.com")}
                   >
                     Contact
                   </Button>
@@ -133,9 +133,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           <div className="flex">
             <Button onClick={handleWorkScroll}>Work</Button>
             <Button onClick={handleAboutScroll}>About</Button>
-            {showBlog && (
-              <Button onClick={() => router.push("/blog")}>Blog</Button>
-            )}
+             
             {showResume && (
               <Button
                 onClick={() => router.push("/resume")}
@@ -145,7 +143,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
+            <Button onClick={() => window.open("mailto:jana.aridi1@gmail.com")}>
               Contact
             </Button>
             {mounted && theme && data.darkMode && (
@@ -162,9 +160,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         ) : (
           <div className="flex">
             <Button onClick={() => router.push("/")}>Home</Button>
-            {showBlog && (
-              <Button onClick={() => router.push("/blog")}>Blog</Button>
-            )}
+             
             {showResume && (
               <Button
                 onClick={() => router.push("/resume")}
@@ -174,7 +170,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
+            <Button onClick={() => window.open("mailto:jana.aridi1@gmail.com")}>
               Contact
             </Button>
 
